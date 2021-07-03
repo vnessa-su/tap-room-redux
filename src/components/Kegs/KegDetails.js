@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "react-bootstrap/Button";
 
 const KegDetails = (props) => {
   return (
@@ -9,6 +10,9 @@ const KegDetails = (props) => {
       <p>Alcohol Content: {props.keg.alcoholContent}%</p>
       <p>Price: ${props.keg.price}</p>
       <p>Pints in Keg: {props.keg.pintsLeft}</p>
+      <Button onClick={() => props.onSellPint(props.keg.id)}>
+        Sell a Pint
+      </Button>
     </React.Fragment>
   );
 };

@@ -38,11 +38,28 @@ class KegContent extends React.Component {
     this.setState({ selectedKeg: kegSelected });
   };
 
+  onDecreasePintsHandler = (id) => {
+    const kegSelected = this.state.itemList.find((keg) => keg.id === id);
+    kegSelected.pintsLeft--;
+    if (kegSelected.pintsLeft < 0) {
+      kegSelected.pintsLeft = 0;
+    }
+    const itemListWithoutSelected = this.state.itemList.filter(
+      (keg) => keg.id !== id
+    );
+    this.setState({ itemList: [...itemListWithoutSelected, kegSelected] });
+  };
+
   render() {
     let visibleContent = null;
     let buttonText = null;
     if (this.state.selectedKeg != null) {
-      visibleContent = <KegDetails keg={this.state.selectedKeg} />;
+      visibleContent = (
+        <KegDetails
+          keg={this.state.selectedKeg}
+          onSellPint={this.onDecreasePintsHandler}
+        />
+      );
       buttonText = "Return to Event List";
     } else if (this.state.showForm) {
       visibleContent = <NewKegForm onSubmit={this.onSubmitNewKegHandler} />;
@@ -52,6 +69,7 @@ class KegContent extends React.Component {
         <KegList
           items={this.state.itemList}
           kegSelectHandler={this.onKegSelect}
+          onSellPint={this.onDecreasePintsHandler}
         />
       );
       buttonText = "Add New Keg";

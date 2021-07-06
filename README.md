@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Tap Room
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### React app that keeps track of an inventory of kegs
 
-## Available Scripts
+#### To see my live website go to https://vnessa-su.github.io/tap-room/
 
-In the project directory, you can run:
+#### By Vanessa Su
 
-### `npm start`
+## Description
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+React web app that allows the user to view a list of kegs in an inventory, add new kegs, remove pints from those kegs as they are sold to customers, edit keg information, and delete kegs from the inventory.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## User Story
 
-### `npm test`
+- As a user, I want to see a list/menu of all available kegs.
+- As a user, I want to submit a form to add a new keg to a list.
+- As a user, I want to be able to click on a keg to see its detail page.
+- As a user, I want to see how many pints are left in a keg.
+- As a user, I want to be able to click a button next to a keg whenever I sell a pint of it. This should decrease the number of pints left by 1. Pints should not be able to go below 0.
+- As a user, I want the option to edit a keg's properties after entering them just in case I make a mistake.
+- As a user, I want to be able to delete a keg.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Component Diagram
 
-### `npm run build`
+![Component Diagram](tap-room_planning.jpg?raw=true "Tap Room Planning Component Diagram")
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies Used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React
+- Javascript
+- Bootstrap
+- Node
+- VSCode
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Setup/Installation Requirements
 
-### `npm run eject`
+### Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- [Node](https://nodejs.org/en/)
+- A text editor like [VS Code](https://code.visualstudio.com/)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. Clone the repository: `$ git clone https://github.com/vnessa-su/tap-room.git`
+2. Navigate to the `tap-room` directory on your computer
+3. Open with your preferred text editor to view the code base
+4. To start a development server and view the project in the browser:
+   - Navigate to `tap-room` in your command line
+   - Run the command `npm install` to install dependencies
+   - Run the command `npm start` to start a development server
+   - Open `http://localhost:3000` in your browser to view the page
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Known Bugs
 
-## Learn More
+- Removing pints from kegs from the kegs list pages causes the list order to change
+- Inventory is only stored on the page, so refreshing the page will reset the inventory
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contact Information
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+For any questions or comments, please reach out through GitHub.
 
-### Code Splitting
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+[MIT License](license)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Copyright (c) 2021 Vanessa Su

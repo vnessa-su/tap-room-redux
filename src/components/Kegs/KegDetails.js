@@ -13,6 +13,9 @@ const KegDetails = (props) => {
       <Button onClick={() => props.onSellPint(props.keg.id)}>
         Sell a Pint
       </Button>
+      <Button onClick={() => props.onClickEdit(props.keg.id)}>
+        Edit Keg Information
+      </Button>
     </React.Fragment>
   );
 };

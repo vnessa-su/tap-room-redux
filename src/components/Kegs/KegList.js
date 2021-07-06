@@ -2,7 +2,7 @@ import React from "react";
 import Keg from "./Keg";
 import ListGroup from "react-bootstrap/ListGroup";
 import Button from "react-bootstrap/Button";
-import { FaBeer, FaMinus } from "react-icons/fa";
+import { FaBeer, FaMinus, FaEdit } from "react-icons/fa";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -38,6 +38,15 @@ const KegList = (props) => {
                   >
                     <FaMinus />
                     <FaBeer />
+                  </Button>
+                </Col>
+                <Col xs={2}>
+                  <Button
+                    title="Edit Information"
+                    onClick={() => props.onClickEdit(item.id)}
+                    className="float-right"
+                  >
+                    <FaEdit />
                   </Button>
                 </Col>
               </Row>

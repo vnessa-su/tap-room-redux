@@ -1,6 +1,7 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import PropTypes from "prop-types";
 
 const KegForm = (props) => {
   return (
@@ -35,6 +36,11 @@ const KegForm = (props) => {
       </Form>
     </React.Fragment>
   );
+};
+
+KegForm.propTypes = {
+  onClickHandler: PropTypes.func,
+  buttonText: PropTypes.string,
 };
 
 export default KegForm;

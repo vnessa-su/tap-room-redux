@@ -6,6 +6,7 @@ import { FaBeer, FaMinus, FaEdit } from "react-icons/fa";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import PropTypes from "prop-types";
 
 const KegList = (props) => {
   return (
@@ -56,6 +57,13 @@ const KegList = (props) => {
       </ListGroup>
     </React.Fragment>
   );
+};
+
+KegList.propTypes = {
+  items: PropTypes.array,
+  kegSelectHandler: PropTypes.func,
+  onSellPint: PropTypes.func,
+  onClickEdit: PropTypes.func,
 };
 
 export default KegList;

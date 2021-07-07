@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
+import PropTypes from "prop-types";
 
 const KegDetails = (props) => {
   return (
@@ -18,6 +19,12 @@ const KegDetails = (props) => {
       </Button>
     </React.Fragment>
   );
+};
+
+KegDetails.propTypes = {
+  keg: PropTypes.object,
+  onSellPint: PropTypes.func,
+  onClickEdit: PropTypes.func,
 };
 
 export default KegDetails;

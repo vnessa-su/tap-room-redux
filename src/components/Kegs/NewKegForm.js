@@ -1,6 +1,7 @@
 import React from "react";
 import { v4 } from "uuid";
 import KegForm from "./KegForm";
+import PropTypes from "prop-types";
 
 const NewKegForm = (props) => {
   function newKegSubmitHandler(event) {
@@ -19,6 +20,10 @@ const NewKegForm = (props) => {
       <KegForm buttonText="Submit" onClickHandler={newKegSubmitHandler} />
     </React.Fragment>
   );
+};
+
+NewKegForm.propTypes = {
+  onSubmit: PropTypes.func,
 };
 
 export default NewKegForm;

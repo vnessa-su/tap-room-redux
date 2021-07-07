@@ -1,5 +1,6 @@
 import React from "react";
 import KegForm from "./KegForm";
+import PropTypes from "prop-types";
 
 const EditKegForm = (props) => {
   function editKegHandler(event) {
@@ -18,6 +19,11 @@ const EditKegForm = (props) => {
       <KegForm buttonText="Save Changes" onClickHandler={editKegHandler} />
     </React.Fragment>
   );
+};
+
+EditKegForm.propTypes = {
+  keg: PropTypes.object,
+  editKegHandler: PropTypes.func,
 };
 
 export default EditKegForm;

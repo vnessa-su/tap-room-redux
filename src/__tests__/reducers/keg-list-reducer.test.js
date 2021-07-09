@@ -11,7 +11,7 @@ describe("kegListReducer", () => {
   };
 
   it("should return the default state", () => {
-    expect(kegListReducer()).toEqual({});
+    expect(kegListReducer({}, { type: null })).toEqual({});
   });
 
   it("should return an object contaning the input keg data", () => {

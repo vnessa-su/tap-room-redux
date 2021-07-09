@@ -12,3 +12,7 @@ export const selectKeg = (keg) => ({
   type: "CHANGE_KEG_SELECT",
   ...keg,
 });
+
+export const clearKegSelect = (keg) => ({
+  type: "CLEAR_KEG_SELECT",
+});

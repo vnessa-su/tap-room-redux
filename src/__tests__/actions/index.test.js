@@ -43,4 +43,9 @@ describe("keg content actions", () => {
     const expectedOutput = { type: "SHOW_NEW_FORM" };
     expect(actions.showNewForm()).toEqual(expectedOutput);
   });
+
+  it("should create HIDE_NEW_FORM action", () => {
+    const expectedOutput = { type: "HIDE_NEW_FORM" };
+    expect(actions.hideNewForm()).toEqual(expectedOutput);
+  });
 });

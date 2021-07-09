@@ -21,7 +21,7 @@ describe("formVisibleReducer", () => {
   });
 
   it("should return object with new property set to true", () => {
-    const inputAction = { type: "TURN_ON_NEW" };
+    const inputAction = { type: "SHOW_NEW_FORM" };
     const expectedOutput = {
       new: true,
       edit: false,
@@ -32,7 +32,7 @@ describe("formVisibleReducer", () => {
   });
 
   it("should return object with new property set to false", () => {
-    const inputAction = { type: "TURN_OFF_NEW" };
+    const inputAction = { type: "HIDE_NEW_FORM" };
     const expectedOutput = {
       new: false,
       edit: false,
@@ -43,7 +43,7 @@ describe("formVisibleReducer", () => {
   });
 
   it("should return object with new property toggled to true", () => {
-    const inputAction = { type: "TOGGLE_NEW" };
+    const inputAction = { type: "TOGGLE_NEW_FORM" };
     const expectedOutput = {
       new: true,
       edit: false,
@@ -54,7 +54,7 @@ describe("formVisibleReducer", () => {
   });
 
   it("should return object with edit property set to true", () => {
-    const inputAction = { type: "TURN_ON_EDIT" };
+    const inputAction = { type: "SHOW_EDIT_FORM" };
     const expectedOutput = {
       new: false,
       edit: true,
@@ -65,7 +65,7 @@ describe("formVisibleReducer", () => {
   });
 
   it("should return object with edit property set to false", () => {
-    const inputAction = { type: "TURN_OFF_EDIT" };
+    const inputAction = { type: "HIDE_EDIT_FORM" };
     const expectedOutput = {
       new: false,
       edit: false,

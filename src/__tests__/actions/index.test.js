@@ -58,4 +58,9 @@ describe("keg content actions", () => {
     const expectedOutput = { type: "SHOW_EDIT_FORM" };
     expect(actions.showEditForm()).toEqual(expectedOutput);
   });
+
+  it("should create HIDE_EDIT_FORM action", () => {
+    const expectedOutput = { type: "HIDE_EDIT_FORM" };
+    expect(actions.hideEditForm()).toEqual(expectedOutput);
+  });
 });

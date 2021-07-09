@@ -1,5 +1,5 @@
-const kegListReducer = (state=[], action)=>{
-  return [];
+const kegListReducer = (state={}, action) => {
+  return {};
 }
 
 export default kegListReducer;

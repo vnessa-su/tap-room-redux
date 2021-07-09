@@ -12,6 +12,9 @@ const selectKegReducer = (state = {}, action) => {
         id: id,
       };
       return newState;
+    case "CLEAR_KEG_SELECT":
+      newState = {};
+      return newState;
     default:
       return state;
   }

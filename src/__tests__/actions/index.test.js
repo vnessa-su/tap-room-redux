@@ -48,4 +48,9 @@ describe("keg content actions", () => {
     const expectedOutput = { type: "HIDE_NEW_FORM" };
     expect(actions.hideNewForm()).toEqual(expectedOutput);
   });
+
+  it("should create TOGGLE_NEW_FORM action", () => {
+    const expectedOutput = { type: "TOGGLE_NEW_FORM" };
+    expect(actions.toggleNewForm()).toEqual(expectedOutput);
+  });
 });

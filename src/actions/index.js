@@ -20,3 +20,7 @@ export const clearKegSelect = (keg) => ({
 export const showNewForm = () => ({
   type: "SHOW_NEW_FORM",
 });
+
+export const hideNewForm = () => ({
+  type: "HIDE_NEW_FORM",
+});

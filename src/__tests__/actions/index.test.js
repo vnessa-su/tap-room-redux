@@ -17,4 +17,12 @@ describe("keg content actions", () => {
     };
     expect(actions.addNewKeg(inputKegData)).toEqual(expectedOutput);
   });
+
+  it("should create DELETE_KEG action", () => {
+    const expectedOutput = {
+      type: "DELETE_KEG",
+      id: 2,
+    };
+    expect(actions.deleteKeg(2)).toEqual(expectedOutput);
+  });
 });

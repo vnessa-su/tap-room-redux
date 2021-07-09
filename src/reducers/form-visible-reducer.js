@@ -9,6 +9,10 @@ const formVisibleReducer = (state = {}, action) => {
       newState = { ...state };
       newState.new = false;
       return newState;
+    case "TOGGLE_NEW":
+      newState = { ...state };
+      newState.new = !state.new;
+      return newState;
     default:
       return state;
   }

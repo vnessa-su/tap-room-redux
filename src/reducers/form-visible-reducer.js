@@ -21,6 +21,10 @@ const formVisibleReducer = (state = {}, action) => {
       newState = { ...state };
       newState.edit = false;
       return newState;
+    case "TOGGLE_EDIT_FORM":
+      newState = { ...state };
+      newState.edit = !state.new;
+      return newState;
     default:
       return state;
   }

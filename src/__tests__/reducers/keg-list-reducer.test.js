@@ -1,4 +1,4 @@
-import kegListReducer from '../reducers/keg-list-reducer';
+import kegListReducer from '../../reducers/keg-list-reducer';
 
 describe('kegListReducer', () => {
   it('should return the default state', () => {

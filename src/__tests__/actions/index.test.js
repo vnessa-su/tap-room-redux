@@ -33,4 +33,9 @@ describe("keg content actions", () => {
     };
     expect(actions.selectKeg(inputKegData)).toEqual(expectedOutput);
   });
+
+  it("should create CLEAR_KEG_SELECT action", () => {
+    const expectedOutput = { type: "CLEAR_KEG_SELECT" };
+    expect(actions.clearKegSelect()).toEqual(expectedOutput);
+  });
 });

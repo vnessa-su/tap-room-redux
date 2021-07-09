@@ -28,3 +28,7 @@ export const hideNewForm = () => ({
 export const toggleNewForm = () => ({
   type: "TOGGLE_NEW_FORM",
 });
+
+export const showEditForm = () => ({
+  type: "SHOW_EDIT_FORM",
+});

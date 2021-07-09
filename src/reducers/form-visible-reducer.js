@@ -17,6 +17,10 @@ const formVisibleReducer = (state = {}, action) => {
       newState = { ...state };
       newState.edit = true;
       return newState;
+    case "TURN_OFF_EDIT":
+      newState = { ...state };
+      newState.edit = false;
+      return newState;
     default:
       return state;
   }

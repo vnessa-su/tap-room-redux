@@ -17,7 +17,7 @@ const kegListReducer = (state = {}, action) => {
       delete newState[id];
       return newState;
     default:
-      return {};
+      return state;
   }
 };
 

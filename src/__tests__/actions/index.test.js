@@ -25,4 +25,12 @@ describe("keg content actions", () => {
     };
     expect(actions.deleteKeg(2)).toEqual(expectedOutput);
   });
+
+  it("should create CHANGE_KEG_SELECT action", () => {
+    const expectedOutput = {
+      type: "CHANGE_KEG_SELECT",
+      ...inputKegData,
+    };
+    expect(actions.selectKeg(inputKegData)).toEqual(expectedOutput);
+  });
 });

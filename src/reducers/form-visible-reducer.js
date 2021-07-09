@@ -13,6 +13,10 @@ const formVisibleReducer = (state = {}, action) => {
       newState = { ...state };
       newState.new = !state.new;
       return newState;
+    case "TURN_ON_EDIT":
+      newState = { ...state };
+      newState.edit = true;
+      return newState;
     default:
       return state;
   }

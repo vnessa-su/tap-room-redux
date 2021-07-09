@@ -63,4 +63,15 @@ describe("formVisibleReducer", () => {
       formVisibleReducer(initialFormVisibilityAllOff, inputAction)
     ).toEqual(expectedOutput);
   });
+
+  it("should return object with edit property set to false", () => {
+    const inputAction = { type: "TURN_OFF_EDIT" };
+    const expectedOutput = {
+      new: false,
+      edit: false,
+    };
+    expect(
+      formVisibleReducer(initialFormVisibilityEditOn, inputAction)
+    ).toEqual(expectedOutput);
+  });
 });

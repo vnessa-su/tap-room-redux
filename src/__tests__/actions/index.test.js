@@ -38,4 +38,9 @@ describe("keg content actions", () => {
     const expectedOutput = { type: "CLEAR_KEG_SELECT" };
     expect(actions.clearKegSelect()).toEqual(expectedOutput);
   });
+
+  it("should create SHOW_NEW_FORM action", () => {
+    const expectedOutput = { type: "SHOW_NEW_FORM" };
+    expect(actions.showNewForm()).toEqual(expectedOutput);
+  });
 });

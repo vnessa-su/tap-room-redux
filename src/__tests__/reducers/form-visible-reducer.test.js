@@ -41,4 +41,15 @@ describe("formVisibleReducer", () => {
       expectedOutput
     );
   });
+
+  it("should return object with new property toggled to true", () => {
+    const inputAction = { type: "TOGGLE_NEW" };
+    const expectedOutput = {
+      new: true,
+      edit: false,
+    };
+    expect(
+      formVisibleReducer(initialFormVisibilityAllOff, inputAction)
+    ).toEqual(expectedOutput);
+  });
 });

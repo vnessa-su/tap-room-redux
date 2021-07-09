@@ -29,7 +29,7 @@ describe("kegListReducer", () => {
     },
   };
 
-  it("should return the default state", () => {
+  it("should return the default state if no action specified", () => {
     expect(kegListReducer({}, { type: null })).toEqual({});
   });
 

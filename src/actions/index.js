@@ -1,42 +1,44 @@
+import * as c from "./ActionTypes";
+
 export const addNewKeg = (keg) => ({
-  type: "ADD_KEG",
+  type: c.ADD_KEG,
   ...keg,
 });
 
 export const deleteKeg = (id) => ({
-  type: "DELETE_KEG",
+  type: c.DELETE_KEG,
   id: id,
 });
 
 export const selectKeg = (keg) => ({
-  type: "CHANGE_KEG_SELECT",
+  type: c.CHANGE_KEG_SELECT,
   ...keg,
 });
 
 export const clearKegSelect = (keg) => ({
-  type: "CLEAR_KEG_SELECT",
+  type: c.CLEAR_KEG_SELECT,
 });
 
 export const showNewForm = () => ({
-  type: "SHOW_NEW_FORM",
+  type: c.SHOW_NEW_FORM,
 });
 
 export const hideNewForm = () => ({
-  type: "HIDE_NEW_FORM",
+  type: c.HIDE_NEW_FORM,
 });
 
 export const toggleNewForm = () => ({
-  type: "TOGGLE_NEW_FORM",
+  type: c.TOGGLE_NEW_FORM,
 });
 
 export const showEditForm = () => ({
-  type: "SHOW_EDIT_FORM",
+  type: c.SHOW_EDIT_FORM,
 });
 
 export const hideEditForm = () => ({
-  type: "HIDE_EDIT_FORM",
+  type: c.HIDE_EDIT_FORM,
 });
 
 export const toggleEditForm = () => ({
-  type: "TOGGLE_EDIT_FORM",
+  type: c.TOGGLE_EDIT_FORM,
 });

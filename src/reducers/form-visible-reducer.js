@@ -1,27 +1,29 @@
+import * as c from "../actions/ActionTypes";
+
 const formVisibleReducer = (state = {}, action) => {
   let newState;
   switch (action.type) {
-    case "SHOW_NEW_FORM":
+    case c.SHOW_NEW_FORM:
       newState = { ...state };
       newState.new = true;
       return newState;
-    case "HIDE_NEW_FORM":
+    case c.HIDE_NEW_FORM:
       newState = { ...state };
       newState.new = false;
       return newState;
-    case "TOGGLE_NEW_FORM":
+    case c.TOGGLE_NEW_FORM:
       newState = { ...state };
       newState.new = !state.new;
       return newState;
-    case "SHOW_EDIT_FORM":
+    case c.SHOW_EDIT_FORM:
       newState = { ...state };
       newState.edit = true;
       return newState;
-    case "HIDE_EDIT_FORM":
+    case c.HIDE_EDIT_FORM:
       newState = { ...state };
       newState.edit = false;
       return newState;
-    case "TOGGLE_EDIT_FORM":
+    case c.TOGGLE_EDIT_FORM:
       newState = { ...state };
       newState.edit = !state.new;
       return newState;

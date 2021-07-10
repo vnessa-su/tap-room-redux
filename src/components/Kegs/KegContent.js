@@ -5,6 +5,8 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import KegDetails from "./KegDetails";
 import EditKegForm from "./EditKegForm";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
 class KegContent extends React.Component {
   constructor(props) {
@@ -114,5 +116,21 @@ class KegContent extends React.Component {
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    kegList: state.kegList,
+    selectedKeg: state.selectedKeg,
+    formVisible: state.formVisible,
+  };
+};
+
+KegContent.propTypes = {
+  kegList: PropTypes.object,
+  selectedKeg: PropTypes.object,
+  formVisible: PropTypes.object,
+};
+
+KegContent = connect(mapStateToProps)(KegContent);
 
 export default KegContent;

@@ -1,0 +1,10 @@
+export const ADD_KEG = "ADD_KEG";
+export const DELETE_KEG = "DELETE_KEG";
+export const CHANGE_KEG_SELECT = "CHANGE_KEG_SELECT";
+export const CLEAR_KEG_SELECT = "CLEAR_KEG_SELECT";
+export const SHOW_NEW_FORM = "SHOW_NEW_FORM";
+export const HIDE_NEW_FORM = "HIDE_NEW_FORM";
+export const TOGGLE_NEW_FORM = "TOGGLE_NEW_FORM";
+export const SHOW_EDIT_FORM = "SHOW_EDIT_FORM";
+export const HIDE_EDIT_FORM = "HIDE_EDIT_FORM";
+export const TOGGLE_EDIT_FORM = "TOGGLE_EDIT_FORM";

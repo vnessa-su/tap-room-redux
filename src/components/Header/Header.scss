@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica&display=swap");
+$im-fell-double-pica-font: "IM Fell Double Pica", serif;
+
+.header {
+  font-family: $im-fell-double-pica-font;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(40px + 2vmin);
+  color: white;
+}

@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+$montserrat-font: "Montserrat", sans-serif;
+
+.form-label {
+  font-family: $montserrat-font;
+  font-weight: bold;
+}
+
+.form-input {
+  max-width: 200px;
+}
+
+#content-container {
+  font-family: $montserrat-font;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: auto;
+  padding: 30px;
+  max-width: 800px;
+  min-height: 450px;
+  border-radius: 10px;
+}

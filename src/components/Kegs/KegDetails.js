@@ -11,10 +11,10 @@ const KegDetails = (props) => {
       <p>Alcohol Content: {props.keg.alcoholContent}%</p>
       <p>Price: ${props.keg.price}</p>
       <p>Pints in Keg: {props.keg.pintsLeft}</p>
-      <Button onClick={() => props.onSellPint(props.keg.id)}>
+      <Button onClick={() => props.onSellPint(props.keg.id)} className="m-2">
         Sell a Pint
       </Button>
-      <Button onClick={() => props.onClickEdit(props.keg.id)}>
+      <Button onClick={() => props.onClickEdit(props.keg.id)} className="m-2">
         Edit Keg Information
       </Button>
     </React.Fragment>

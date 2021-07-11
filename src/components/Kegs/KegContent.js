@@ -8,6 +8,7 @@ import EditKegForm from "./EditKegForm";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import * as action from "../../actions";
+import "./KegContent.scss";
 
 class KegContent extends React.Component {
   onButtonClickHandler = () => {
@@ -94,9 +95,11 @@ class KegContent extends React.Component {
     }
     return (
       <React.Fragment>
-        <Container>
+        <Container id="content-container">
           {visibleContent}
-          <Button onClick={this.onButtonClickHandler}>{buttonText}</Button>
+          <div class="text-center m-2">
+            <Button onClick={this.onButtonClickHandler}>{buttonText}</Button>
+          </div>
         </Container>
       </React.Fragment>
     );

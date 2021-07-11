@@ -1,14 +1,14 @@
-# Tap Room
+# Tap Room with Redux
 
-#### React app that keeps track of an inventory of kegs
+#### React app that keeps track of an inventory of kegs, using Redux to store app states.
 
-#### To see my live website go to https://vnessa-su.github.io/tap-room/
+#### To see my live website go to https://vnessa-su.github.io/tap-room-redux/
 
 #### By Vanessa Su
 
 ## Description
 
-React web app that allows the user to view a list of kegs in an inventory, add new kegs, remove pints from those kegs as they are sold to customers, edit keg information, and delete kegs from the inventory.
+React web app that allows the user to view a list of kegs in an inventory, add new kegs, remove pints from those kegs as they are sold to customers, edit keg information, and delete kegs from the inventory. The state storage for this app is implemented using Redux. Tests for Redux reducers and action creators are implemented in Jest
 
 ## User Story
 
@@ -27,7 +27,9 @@ React web app that allows the user to view a list of kegs in an inventory, add n
 ## Technologies Used
 
 - React
+- Redux
 - Javascript
+- Jest
 - Bootstrap
 - Node
 - VSCode
@@ -49,10 +51,12 @@ React web app that allows the user to view a list of kegs in an inventory, add n
    - Run the command `npm install` to install dependencies
    - Run the command `npm start` to start a development server
    - Open `http://localhost:3000` in your browser to view the page
+5. To run the tests:
+   - Navigate to `tap-room` in your command line
+   - Run the command `npm test`
 
 ## Known Bugs
 
-- Removing pints from kegs from the kegs list pages causes the list order to change
 - Inventory is only stored on the page, so refreshing the page will reset the inventory
 
 ## Contact Information

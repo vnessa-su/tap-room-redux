@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/tap-room-redux/static/css/main.9dde06f0.chunk.css",
+    "main.js": "/tap-room-redux/static/js/main.35973df4.chunk.js",
+    "main.js.map": "/tap-room-redux/static/js/main.35973df4.chunk.js.map",
+    "runtime-main.js": "/tap-room-redux/static/js/runtime-main.33123ec6.js",
+    "runtime-main.js.map": "/tap-room-redux/static/js/runtime-main.33123ec6.js.map",
+    "static/css/2.081f420c.chunk.css": "/tap-room-redux/static/css/2.081f420c.chunk.css",
+    "static/js/2.0b3c5318.chunk.js": "/tap-room-redux/static/js/2.0b3c5318.chunk.js",
+    "static/js/2.0b3c5318.chunk.js.map": "/tap-room-redux/static/js/2.0b3c5318.chunk.js.map",
+    "static/js/3.67cf4bf7.chunk.js": "/tap-room-redux/static/js/3.67cf4bf7.chunk.js",
+    "static/js/3.67cf4bf7.chunk.js.map": "/tap-room-redux/static/js/3.67cf4bf7.chunk.js.map",
+    "index.html": "/tap-room-redux/index.html",
+    "static/css/2.081f420c.chunk.css.map": "/tap-room-redux/static/css/2.081f420c.chunk.css.map",
+    "static/css/main.9dde06f0.chunk.css.map": "/tap-room-redux/static/css/main.9dde06f0.chunk.css.map",
+    "static/js/2.0b3c5318.chunk.js.LICENSE.txt": "/tap-room-redux/static/js/2.0b3c5318.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.33123ec6.js",
+    "static/css/2.081f420c.chunk.css",
+    "static/js/2.0b3c5318.chunk.js",
+    "static/css/main.9dde06f0.chunk.css",
+    "static/js/main.35973df4.chunk.js"
+  ]
+}

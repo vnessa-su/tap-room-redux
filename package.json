@@ -1,6 +1,6 @@
 {
-  "homepage": "http://vnessa-su.github.io/tap-room",
-  "name": "tap-room",
+  "homepage": "http://vnessa-su.github.io/tap-room-redux",
+  "name": "tap-room-redux",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/tap-room-redux/static/css/main.016ccba2.chunk.css",
+    "main.css": "/tap-room-redux/static/css/main.50320b53.chunk.css",
     "main.js": "/tap-room-redux/static/js/main.5679f5b6.chunk.js",
     "main.js.map": "/tap-room-redux/static/js/main.5679f5b6.chunk.js.map",
     "runtime-main.js": "/tap-room-redux/static/js/runtime-main.36960c57.js",
@@ -12,7 +12,7 @@
     "static/js/3.905123ba.chunk.js.map": "/tap-room-redux/static/js/3.905123ba.chunk.js.map",
     "index.html": "/tap-room-redux/index.html",
     "static/css/2.081f420c.chunk.css.map": "/tap-room-redux/static/css/2.081f420c.chunk.css.map",
-    "static/css/main.016ccba2.chunk.css.map": "/tap-room-redux/static/css/main.016ccba2.chunk.css.map",
+    "static/css/main.50320b53.chunk.css.map": "/tap-room-redux/static/css/main.50320b53.chunk.css.map",
     "static/js/2.5e1d20fd.chunk.js.LICENSE.txt": "/tap-room-redux/static/js/2.5e1d20fd.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/tap-room-redux/static/media/taps-pixabay.26c5fbfc.jpg"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.36960c57.js",
     "static/css/2.081f420c.chunk.css",
     "static/js/2.5e1d20fd.chunk.js",
-    "static/css/main.016ccba2.chunk.css",
+    "static/css/main.50320b53.chunk.css",
     "static/js/main.5679f5b6.chunk.js"
   ]
 }

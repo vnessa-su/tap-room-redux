@@ -7,98 +7,84 @@ import KegDetails from "./KegDetails";
 import EditKegForm from "./EditKegForm";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
+import * as action from "../../actions";
 
 class KegContent extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      showForm: false,
-      showEditForm: false,
-      selectedKeg: null,
-      itemList: [],
-    };
-  }
-
   onButtonClickHandler = () => {
-    if (this.state.selectedKeg != null) {
-      this.setState({
-        showForm: false,
-        showEditForm: false,
-        selectedKeg: null,
-      });
+    const { dispatch } = this.props;
+    if (Object.keys(this.props.selectedKeg).length) {
+      dispatch(action.hideNewForm());
+      dispatch(action.hideEditForm());
+      dispatch(action.clearKegSelect());
     } else {
-      this.setState((prevState) => ({
-        showForm: !prevState.showForm,
-      }));
+      dispatch(action.toggleNewForm());
     }
   };
 
   onSubmitNewKegHandler = (keg) => {
-    const newItemList = [...this.state.itemList, keg];
-    this.setState({ itemList: newItemList, showForm: false });
+    const { dispatch } = this.props;
+    dispatch(action.addNewKeg(keg));
+    dispatch(action.hideNewForm());
   };
 
   onKegSelect = (id) => {
-    const kegSelected = this.state.itemList.find((keg) => keg.id === id);
-    this.setState({ selectedKeg: kegSelected });
+    const { dispatch } = this.props;
+    const keg = this.props.kegList[id];
+    dispatch(action.selectKeg(keg));
   };
 
   onDecreasePintsHandler = (id) => {
-    const kegSelected = this.state.itemList.find((keg) => keg.id === id);
+    const { dispatch } = this.props;
+    const kegSelected = this.props.kegList[id];
     kegSelected.pintsLeft--;
     if (kegSelected.pintsLeft < 0) {
       kegSelected.pintsLeft = 0;
     }
-    const itemListWithoutSelected = this.state.itemList.filter(
-      (keg) => keg.id !== id
-    );
-    this.setState({ itemList: [...itemListWithoutSelected, kegSelected] });
+    dispatch(action.addNewKeg(kegSelected));
+    if (Object.keys(this.props.selectedKeg).length) {
+      dispatch(action.selectKeg(kegSelected));
+    }
   };
 
   onSaveKegEditHandler = (keg) => {
-    const itemListWithoutSelected = this.state.itemList.filter(
-      (item) => item.id !== keg.id
-    );
-    this.setState({
-      showForm: false,
-      showEditForm: false,
-      selectedKeg: null,
-      itemList: [...itemListWithoutSelected, keg],
-    });
+    const { dispatch } = this.props;
+    dispatch(action.addNewKeg(keg));
+    dispatch(action.hideNewForm());
+    dispatch(action.hideEditForm());
+    dispatch(action.selectKeg(keg));
   };
 
   onEditKegClickHandler = (id) => {
-    const kegSelected = this.state.itemList.find((keg) => keg.id === id);
-    this.setState({
-      showEditForm: true,
-      selectedKeg: kegSelected,
-    });
+    const { dispatch } = this.props;
+    const kegSelected = this.props.kegList[id];
+    dispatch(action.showEditForm());
+    dispatch(action.selectKeg(kegSelected));
   };
 
   render() {
     let visibleContent = null;
     let buttonText = "Return to Keg List";
-    if (this.state.showEditForm) {
+    if (this.props.formVisible.edit) {
       visibleContent = (
         <EditKegForm
-          keg={this.state.selectedKeg}
+          keg={this.props.selectedKeg}
           onSave={this.onSaveKegEditHandler}
         />
       );
-    } else if (this.state.selectedKeg != null) {
+    } else if (Object.keys(this.props.selectedKeg).length) {
       visibleContent = (
         <KegDetails
-          keg={this.state.selectedKeg}
+          keg={this.props.selectedKeg}
           onSellPint={this.onDecreasePintsHandler}
           onClickEdit={this.onEditKegClickHandler}
         />
       );
-    } else if (this.state.showForm) {
+    } else if (this.props.formVisible.new) {
       visibleContent = <NewKegForm onSubmit={this.onSubmitNewKegHandler} />;
     } else {
       visibleContent = (
         <KegList
-          items={this.state.itemList}
+          items={this.props.kegList}
           kegSelectHandler={this.onKegSelect}
           onSellPint={this.onDecreasePintsHandler}
           onClickEdit={this.onEditKegClickHandler}

@@ -12,7 +12,7 @@ const KegList = (props) => {
   return (
     <React.Fragment>
       <ListGroup>
-        {props.items.map((item) => (
+        {Object.values(props.items).map((item) => (
           <ListGroup.Item key={item.id}>
             <Container>
               <Row>
